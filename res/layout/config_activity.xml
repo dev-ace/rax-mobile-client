@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/usernametext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/username" />
+
+    <EditText
+        android:id="@+id/usernameeditext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/usernametext"
+        android:layout_below="@+id/usernametext"
+        android:ems="10"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/apikeytext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/usernametext"
+        android:layout_below="@+id/usernameeditext"
+        android:layout_marginTop="45dp"
+        android:text="@string/apikey" />
+
+    <EditText
+        android:id="@+id/apikeyedittext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/usernametext"
+        android:layout_below="@+id/apikeytext"
+        android:ems="10"
+        android:inputType="textVisiblePassword" />
+
+    <TextView
+        android:id="@+id/containertext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/usernametext"
+        android:layout_centerVertical="true"
+        android:text="@string/container" />
+
+    <EditText
+        android:id="@+id/containeredittext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/usernametext"
+        android:layout_below="@+id/containertext"
+        android:ems="10"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/saveconfigbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/containeredittext"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="52dp"
+        android:text="@string/saveconfigbtn" />
+
+</RelativeLayout>

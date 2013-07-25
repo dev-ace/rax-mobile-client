@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Rackspace Mobile Client</string>
+    <string name="action_settings">Settings</string>
+    <string name="config_item">Configuration</string>
+    <string name="homeitem">Home</string>
+    <string name="download_item">Download Files</string>
+    <string name="upload_item">Upload Files</string>
+    <string name="config_activity_str">Rackspace Mobile: Configuration</string>
+    <string name="download_activity_str">Rackspace Mobile: Download Files</string>
+    <string name="upload_activity_str">Rackspace Mobile: Upload Files</string>
+    <string name="username">User Name</string>
+    <string name="apikey">Api Key</string>
+    <string name="container">Container</string>
+    <string name="saveconfigbtn">Save</string>
+    <string name="home_btn_description">The home menu page</string>
+    <string name="config_btn_description">Edit user configuration</string>
+    <string name="download_btn_description">Download container files</string>
+    <string name="upload_btn_description">Download container files</string>
+    <string name="title_activity_choices">ChoicesActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_config">ConfigActivity</string>
+    <string name="title_activity_upload">UploadActivity</string>
+    <string name="title_activity_download">DownloadActivity</string>
+    <string name="select_upload">Select</string>    
+
+</resources>

@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+        <item
+        android:id="@+id/home_item"
+        android:title="@string/homeitem"
+        android:icon="@drawable/cloudcomputing"
+        />        
+        <item
+        android:id="@+id/config_item"
+        android:title="@string/config_item"
+        android:icon="@drawable/cloud"
+        />
+        <item
+        android:id="@+id/download_item"
+        android:title="@string/download_item"
+        android:icon="@drawable/arrowdown"
+        />
+        <item
+        android:id="@+id/upload_item"
+        android:title="@string/upload_item"
+        android:icon="@drawable/uparrow"
+        />  
+</menu>

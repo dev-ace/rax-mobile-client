@@ -1,0 +1,86 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ChoicesActivity" >
+
+    <ImageButton
+        android:id="@+id/home_image_btn"
+        android:layout_width="25dip"
+        android:layout_height="25dip"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/cloud" 
+        android:contentDescription="@string/home_btn_description"/>
+
+    <TextView
+        android:id="@+id/choices_home_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/home_image_btn"
+        android:layout_toRightOf="@+id/home_image_btn"
+        android:text="@string/homeitem"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+    <ImageButton
+        android:id="@+id/config_image_btn"
+        android:layout_width="25dip"
+        android:layout_height="25dip"
+        android:layout_below="@+id/choices_home_text"
+        android:layout_marginTop="19dp"
+        android:layout_toLeftOf="@+id/choices_home_text"
+        android:background="@drawable/images" 
+        android:contentDescription="@string/config_btn_description"/>
+
+    <TextView
+        android:id="@+id/choices_config_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/config_image_btn"
+        android:layout_toRightOf="@+id/config_image_btn"
+        android:text="@string/config_item"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+    <ImageButton
+        android:id="@+id/download_img_btn"
+        android:layout_width="25dip"
+        android:layout_height="25dip"
+        android:layout_below="@+id/config_image_btn"
+        android:layout_marginTop="19dp"
+        android:layout_toLeftOf="@+id/choices_config_text"
+        android:background="@drawable/arrowdown" 
+        android:contentDescription="@string/download_btn_description"/>  
+        
+    <TextView
+        android:id="@+id/choices_download_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/download_img_btn"
+        android:layout_toRightOf="@+id/download_img_btn"
+        android:text="@string/download_item"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+    <ImageButton
+        android:id="@+id/upload_img_btn"
+        android:layout_width="25dip"
+        android:layout_height="25dip"
+        android:layout_below="@+id/download_img_btn"
+        android:layout_marginTop="19dp"
+        android:layout_toLeftOf="@+id/choices_config_text"
+        android:background="@drawable/uparrow"
+        android:contentDescription="@string/upload_btn_description"/>  
+        
+    <TextView
+        android:id="@+id/choices_upload_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/upload_img_btn"
+        android:layout_toRightOf="@+id/upload_img_btn"
+        android:text="@string/upload_item"
+        android:textAppearance="?android:attr/textAppearanceMedium" />    
+    
+</RelativeLayout>
