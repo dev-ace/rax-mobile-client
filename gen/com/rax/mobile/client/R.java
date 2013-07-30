@@ -36,8 +36,8 @@ public final class R {
         public static final int uparrow=0x7f02000c;
     }
     public static final class id {
-        public static final int PhoneImageGrid=0x7f080018;
-        public static final int action_settings=0x7f08001d;
+        public static final int PhoneImageGrid=0x7f08001e;
+        public static final int action_settings=0x7f080023;
         public static final int apikeyedittext=0x7f08000b;
         public static final int apikeytext=0x7f08000a;
         public static final int choices_config_text=0x7f080003;
@@ -45,25 +45,31 @@ public final class R {
         public static final int choices_home_text=0x7f080001;
         public static final int choices_upload_text=0x7f080007;
         public static final int config_image_btn=0x7f080002;
-        public static final int config_item=0x7f08001a;
+        public static final int config_item=0x7f080020;
+        public static final int container_filename=0x7f08001a;
+        public static final int container_filename_str=0x7f080019;
+        public static final int container_txt_str=0x7f080015;
         public static final int containeredittext=0x7f08000d;
         public static final int containertext=0x7f08000c;
-        public static final int count=0x7f080012;
+        public static final int count=0x7f080014;
+        public static final int count_str=0x7f080013;
         public static final int download_img_btn=0x7f080004;
-        public static final int download_item=0x7f08001b;
-        public static final int filename=0x7f080011;
+        public static final int download_item=0x7f080021;
+        public static final int filename=0x7f080012;
+        public static final int filename_str=0x7f080011;
+        public static final int files_thumbnail=0x7f080017;
         public static final int home_image_btn=0x7f080000;
-        public static final int home_item=0x7f080019;
-        public static final int itemCheckBox=0x7f080016;
-        public static final int list=0x7f080014;
+        public static final int home_item=0x7f08001f;
+        public static final int itemCheckBox=0x7f08001c;
+        public static final int list=0x7f080016;
+        public static final int list_file_image=0x7f080018;
         public static final int list_image=0x7f080010;
         public static final int saveconfigbtn=0x7f08000e;
-        public static final int selectBtn=0x7f080017;
-        public static final int size=0x7f080013;
-        public static final int thumbImage=0x7f080015;
+        public static final int selectBtn=0x7f08001d;
+        public static final int thumbImage=0x7f08001b;
         public static final int thumbnail=0x7f08000f;
         public static final int upload_img_btn=0x7f080006;
-        public static final int upload_item=0x7f08001c;
+        public static final int upload_item=0x7f080022;
         public static final int usernameeditext=0x7f080009;
         public static final int usernametext=0x7f080008;
     }
@@ -72,8 +78,10 @@ public final class R {
         public static final int config_activity=0x7f030001;
         public static final int container_list_row=0x7f030002;
         public static final int download_activity=0x7f030003;
-        public static final int gallery_layout=0x7f030004;
-        public static final int upload_activity=0x7f030005;
+        public static final int download_files_activity=0x7f030004;
+        public static final int files_list_row=0x7f030005;
+        public static final int gallery_layout=0x7f030006;
+        public static final int upload_activity=0x7f030007;
     }
     public static final class menu {
         public static final int choices=0x7f070000;
@@ -85,10 +93,14 @@ public final class R {
         public static final int action_settings=0x7f050001;
         public static final int apikey=0x7f05000a;
         public static final int app_name=0x7f050000;
+        public static final int available_containers_str=0x7f05001b;
         public static final int config_activity_str=0x7f050006;
         public static final int config_btn_description=0x7f05000e;
         public static final int config_item=0x7f050002;
         public static final int container=0x7f05000b;
+        public static final int container_file_name_str=0x7f05001c;
+        public static final int container_name_str=0x7f050018;
+        public static final int count_str=0x7f050019;
         public static final int download_activity_str=0x7f050007;
         public static final int download_btn_description=0x7f05000f;
         public static final int download_item=0x7f050004;
@@ -97,6 +109,8 @@ public final class R {
         public static final int homeitem=0x7f050003;
         public static final int saveconfigbtn=0x7f05000c;
         public static final int select_upload=0x7f050016;
+        public static final int size_str=0x7f05001a;
+        public static final int thumbnail_description=0x7f050017;
         public static final int title_activity_choices=0x7f050011;
         public static final int title_activity_config=0x7f050013;
         public static final int title_activity_download=0x7f050015;

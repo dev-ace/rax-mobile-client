@@ -21,47 +21,89 @@
             android:background="@drawable/folder"/>
         
     </LinearLayout>
-    
+
+        <!-- Container Name -->
+    <TextView 
+        android:id="@+id/filename_str"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/thumbnail"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:paddingLeft="10dip"     
+        android:textColor="#040404"
+        android:typeface="sans"
+        android:textSize="12sp"
+        android:text="@string/container_name_str"
+        />    
         <!-- File name -->
     <TextView 
         android:id="@+id/filename"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/thumbnail"
-        android:layout_toRightOf="@+id/thumbnail"
-        android:paddingLeft="10dip"
-       
+        android:layout_toRightOf="@+id/filename_str"
+        android:paddingLeft="10dip"     
         android:textColor="#040404"
         android:typeface="sans"
-        android:textSize="15dp"
-        android:textStyle="bold"/>
+        android:textSize="12sp"
+        android:textStyle="bold"
+        />
     
+    <TextView
+        android:id="@+id/count_str"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/filename_str"
+        android:layout_marginTop="1dip"
+        android:layout_toLeftOf="@+id/filename"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:paddingLeft="10dip"
+        android:text="@string/count_str"
+        android:textAlignment="textEnd"
+        android:textColor="#343434"
+        android:textSize="12sp" />
+        
         <!-- Count -->
-    <TextView 
+
+    <TextView
         android:id="@+id/count"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/filename"
+        android:layout_below="@+id/filename"
+        android:layout_marginTop="1dip"
+        android:paddingLeft="10dip"
+        android:layout_toRightOf="@id/count_str"
+        android:textColor="#343434"
+        android:textSize="12sp" 
+        
+        />
+
+    <!--  
+        <TextView 
+        android:id="@+id/size_str"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/count_str"
+        android:layout_toRightOf="@+id/thumbnail"
         android:paddingLeft="10dip"
         android:textColor="#343434"
         android:textAlignment="textEnd"
-        android:textSize="10dp"
+        android:textSize="12sp"
         android:layout_marginTop="1dip"
-        android:layout_toRightOf="@+id/thumbnail"
-        />
-
-       <!-- Size -->
+        android:text="@string/size_str"/>    
+    
+       
         <TextView 
         android:id="@+id/size"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/filename"
+        android:layout_below="@id/count"
+        android:layout_toRightOf="@+id/size_str"
         android:paddingLeft="10dip"
         android:textColor="#343434"
         android:textAlignment="textEnd"
-        android:textSize="10dip"
+        android:textSize="12sp"
         android:layout_marginTop="1dip"
-        android:layout_toRightOf="@+id/count"
         />
-    
+    -->
 </RelativeLayout>
