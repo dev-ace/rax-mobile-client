@@ -2,5 +2,6 @@
 <lint>
     <issue id="NewApi">
         <ignore path="src/com/rax/mobile/client/activity/ConfigActivity.java" />
+        <ignore path="src/com/rax/mobile/client/async/DownloadFilesRestClient.java" />
     </issue>
 </lint>

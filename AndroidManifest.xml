@@ -11,8 +11,8 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.VIBRATE" />    
-    
+    <uses-permission android:name="android.permission.VIBRATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -38,6 +38,10 @@
         <activity
             android:name="com.rax.mobile.client.activity.DownloadActivity"
             android:label="@string/title_activity_download" >
+        </activity>
+        <activity
+            android:name="com.rax.mobile.client.activity.DownloadFilesActivity"
+            android:label="@string/title_activity_download_files" >
         </activity>
     </application>
 

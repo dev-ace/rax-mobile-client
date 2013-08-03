@@ -56,14 +56,33 @@
         android:layout_below="@+id/containertext"
         android:ems="10"
         android:inputType="text" />
-
+<!--  
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/downloadFolderSpinner"
+        android:layout_below="@+id/containeredittext"
+        android:layout_marginTop="26dp"
+        android:text="@string/download_directory" 
+        android:textSize="15sp"/>
+        
+    <Spinner
+        android:id="@+id/downloadFolderSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/containeredittext"
+        android:layout_below="@+id/containeredittext"
+        android:layout_marginTop="40dp" />    
+-->
+    
     <Button
         android:id="@+id/saveconfigbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/containeredittext"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="52dp"
+        android:layout_marginBottom="28dp"
         android:text="@string/saveconfigbtn" />
 
 </RelativeLayout>

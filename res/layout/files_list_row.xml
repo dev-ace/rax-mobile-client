@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_selector"
+    android:padding="5dip" >
+
+        <LinearLayout 
+            android:id="@+id/files_thumbnail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dip"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/image_bg"
+            android:layout_marginRight="5dip">
+        
+            <ImageView 
+                android:id="@+id/list_file_image"
+                android:layout_width="25dip"
+                android:layout_height="25dip"
+                android:background="@drawable/file"/>
+        </LinearLayout> 
+        <TextView 
+            android:id="@+id/container_filename_str"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/files_thumbnail"
+            android:layout_toRightOf="@+id/files_thumbnail"
+            android:paddingLeft="10dip"     
+            android:textColor="#343434"
+            android:typeface="sans"
+            android:textSize="12sp"
+            android:text="@string/container_file_name_str"
+            />
+        <!-- File name -->
+        <TextView 
+            android:id="@+id/container_filename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/files_thumbnail"
+            android:layout_toRightOf="@+id/container_filename_str"
+            android:paddingLeft="10dip"     
+            android:textColor="#343434"
+            android:typeface="sans"
+            android:textSize="12sp"
+        />            
+
+        <TextView 
+            android:id="@+id/file_size_str"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/container_filename_str"
+            android:layout_toRightOf="@+id/files_thumbnail"
+            android:paddingLeft="10dip"     
+            android:textColor="#343434"
+            android:typeface="sans"
+            android:textSize="12sp"
+            android:text="@string/file_size_str"
+            />
+        <!-- File name -->
+        <TextView 
+            android:id="@+id/file_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/container_filename_str"
+            android:layout_toRightOf="@+id/file_size_str"
+            android:paddingLeft="10dip"     
+            android:textColor="#343434"
+            android:typeface="sans"
+            android:textSize="12sp"
+        />          
+
+</RelativeLayout>

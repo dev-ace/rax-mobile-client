@@ -5,16 +5,15 @@ import java.util.Map;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.immersion.uhl.Launcher;
-import com.rackspace.mobile.saxhandler.ContainerSaxHandler.Container;
 import com.rax.mobile.client.R;
 import com.rax.mobile.client.async.ContainerRestClient;
 
@@ -22,15 +21,18 @@ public class DownloadActivity extends Activity {
 
 	private ListView list;
 	
-	private String USER_NAME="mossoths";
-	private String API_KEY="99b917af206ae042f3291264e0b78a84";
+	private static final boolean debug=false;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		final String METHOD_NAME="DownloadActivity.oncreate()";
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.download_activity);
+		super.setContentView(R.layout.download_activity);
+		
+		super.setTitle(super.getResources().getString(R.id.download_item));
 
 		ContainerRestClient containerRestClient=new ContainerRestClient(this);
+		//This will populate the list of containers
 		containerRestClient.execute("doIt");
 		//List<Map<String,String>>containerList=containerRestClient.getList();
 		
@@ -39,11 +41,19 @@ public class DownloadActivity extends Activity {
 		lv.setOnItemClickListener(new OnItemClickListener() {
 
 			@Override
-			public void onItemClick(AdapterView<?> parent, View view,
-					int position, long id) {
-				            Map<String, String> theContainerMap=(Map<String,String>)lv.getItemAtPosition(position);
-							Toast.makeText(DownloadActivity.this, "selected: "+theContainerMap.get("name"), Toast.LENGTH_LONG).show();
-
+			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+			    Map<String, String> theContainerMap=(Map<String,String>)lv.getItemAtPosition(position);
+				String container=theContainerMap.get("name");
+				if(debug){
+				    Log.d(METHOD_NAME,": container="+container);
+				}
+//				DownloadFilesActivity downloadActivity=new DownloadFilesActivity(container);
+				
+				Intent intent=new Intent(DownloadActivity.this, DownloadFilesActivity.class);
+				intent.putExtra("container", container);
+        	    DownloadActivity.super.startActivity(intent);
+				Launcher haptic=new Launcher(DownloadActivity.this);
+				haptic.play(Launcher.BUMP_33);        	    
 			}
         });
 //		try {

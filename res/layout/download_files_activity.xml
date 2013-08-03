@@ -1,32 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical">
-
-    
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+ 
     <TextView
-        android:id="@+id/container_txt_str" 
+        android:id="@+id/files_title_txt_str" 
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
-        android:text="@string/available_containers_str"        
+        android:text="@string/available_files_str"        
         />
-
+ 
     <ProgressBar
-        android:id="@+id/container_progress_id"
+        android:id="@+id/files_progress_id"
         style="@android:style/Widget.ProgressBar.Small"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" 
-        android:layout_marginLeft="10dp"/>
+        android:layout_marginLeft="10dp"/>    
     
     <ListView 
-        android:id="@+id/list"
+        android:id="@+id/files_list"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:divider="#B5B5B5"
         android:dividerHeight="1dp"
-        android:listSelector="@drawable/list_selector"/>
-
+        android:listSelector="@drawable/list_selector"/>    
 
 </LinearLayout>

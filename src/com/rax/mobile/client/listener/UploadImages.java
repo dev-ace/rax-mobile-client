@@ -4,14 +4,13 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.immersion.uhl.Launcher;
-import com.rax.mobile.client.async.RssFeedPull;
-
 import android.content.Context;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Toast;
+
+import com.immersion.uhl.Launcher;
+import com.rax.mobile.client.async.RssFeedPull;
 
 public class UploadImages implements OnClickListener {
 	private boolean[] thumbnailsselection;
@@ -31,6 +30,7 @@ public class UploadImages implements OnClickListener {
 
 	
 	public static final String AUTH_URL="https://identity.api.rackspacecloud.com/v2.0/tokens";
+	private static final boolean debug=false;
 	
 	public UploadImages(Context context, boolean[] thumbnailsselection, String[] arrPath){
 		super();
@@ -48,7 +48,6 @@ public class UploadImages implements OnClickListener {
 		final int len = thumbnailsselection.length;
 		int cnt = 0;
 		String selectImages = "";
-
 		
 		List<File>filesToUpload=new ArrayList<File>();
 		for (int i =0; i<len; i++)
@@ -61,18 +60,14 @@ public class UploadImages implements OnClickListener {
 			}
 		}
 		
-        RssFeedPull feed=new RssFeedPull("fimages",filesToUpload);
-		feed.execute("");
 		if (cnt == 0){
 			Toast.makeText(this.context,
 					"Please select at least one image",
 					Toast.LENGTH_LONG).show();
-		} else {
-			Toast.makeText(this.context,
-					"Uploading " + cnt + " image(s).",
-					Toast.LENGTH_LONG).show();
-			Log.d("SelectedImages", selectImages);
-			System.out.println("~~~~~~~SelectedImages"+ selectImages);
+		} 
+		else {
+	        RssFeedPull feed=new RssFeedPull(this.context,"fimages",filesToUpload);
+			feed.execute("");			
 		}
 		if(null!=this.hapticLauncher){
 			this.hapticLauncher.play(Launcher.BUMP_33);

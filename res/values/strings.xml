@@ -17,18 +17,23 @@
     <string name="home_btn_description">The home menu page</string>
     <string name="config_btn_description">Edit user configuration</string>
     <string name="download_btn_description">Download container files</string>
-    <string name="upload_btn_description">Download container files</string>
+    <string name="upload_btn_description">Upload files</string>
     <string name="title_activity_choices">ChoicesActivity</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_config">ConfigActivity</string>
     <string name="title_activity_upload">UploadActivity</string>
     <string name="title_activity_download">DownloadActivity</string>
-    <string name="select_upload">Select</string>   
-    <string name="thumbnail_description">Select</string>   
-    <string name="container_name_str">Container Name:</string> 
+    <string name="select_upload">Select</string>
+    <string name="thumbnail_description">Select</string>
+    <string name="container_name_str">Container Name:</string>
     <string name="count_str">Number of Files:</string>
     <string name="size_str">Container Size:</string>
     <string name="available_containers_str">Available Containers:</string>
+    <string name="available_files_str">Available Files:</string>
     <string name="container_file_name_str">File Name:</string>
+    <string name="file_size_str">File Size:</string>
+    <string name="files_title_txt_str">Files in Conatiner:</string>
+    <string name="title_activity_download_files">Download Files Activity</string>
+    <string name="download_directory">Files Saved to Directory:</string>
 
 </resources>

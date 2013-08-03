@@ -16,6 +16,9 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class ChoicesActivity extends Activity {
+	
+	private static boolean debug=false;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -32,6 +35,7 @@ public class ChoicesActivity extends Activity {
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
+		String METHOD_NAME="ChoicesActivity.onOptionsItemSelected";
 	    switch (item.getItemId()) {
             case R.id.home_item :{
     	        Intent intent=new Intent(ChoicesActivity.this,ChoicesActivity.class);
@@ -41,7 +45,9 @@ public class ChoicesActivity extends Activity {
     	        return true;
             }	    
             case R.id.config_item:{
-            	Log.d("ChoicesActivity.","onOptionsItemSelected(): going to the ConfigActivity!!!!");
+            	if(debug){
+            		Log.d(METHOD_NAME,": going to the ConfigActivity!!!!");
+            	}
         	    Intent intent=new Intent(ChoicesActivity.this,ConfigActivity.class);
         	    super.startActivity(intent);
 				Launcher haptic=new Launcher(ChoicesActivity.this);

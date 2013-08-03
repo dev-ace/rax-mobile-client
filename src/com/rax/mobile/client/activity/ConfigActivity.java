@@ -7,26 +7,36 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Properties;
 
-import com.immersion.uhl.Launcher;
-import com.rax.mobile.client.R;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Environment;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.immersion.uhl.Launcher;
+import com.rax.mobile.client.R;
+
 public class ConfigActivity extends Activity {
+	
+	private static final boolean debug=false;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.config_activity);
 		creatUIListeners();
 		getConfiguration();
+
+//		Spinner spinner=(Spinner)super.findViewById(R.id.downloadFolderSpinner);
+//		File externalStorageFolder=Environment.getExternalStorageDirectory();
+
 	}
 	
 	@Override
@@ -75,8 +85,10 @@ public class ConfigActivity extends Activity {
 	}
 	
 	private void getConfiguration(){
-		String METHOD_NAME="getConfiguration()";
-		Log.d(METHOD_NAME,": ENTER:");
+		String METHOD_NAME="ConfigActivity.getConfiguration()";
+		if(debug){
+			Log.d(METHOD_NAME,": ENTER:");
+		}
 		File dir=super.getFilesDir();
 		File props=new File(dir, "raxfiles.properties");
 		boolean fileExists=true;
@@ -90,11 +102,11 @@ public class ConfigActivity extends Activity {
 				
 			} 
 			catch (FileNotFoundException e) {
-				Log.d(METHOD_NAME,": FileNotFoundException: ",e);
+				Log.e(METHOD_NAME,": FileNotFoundException: ",e);
 				e.printStackTrace();
 			}
 			catch (IOException e) {
-				Log.d(METHOD_NAME,": IOException: ",e);
+				Log.e(METHOD_NAME,": IOException: ",e);
 				e.printStackTrace();
 			}
 		}
@@ -107,20 +119,28 @@ public class ConfigActivity extends Activity {
 			String username=properties.getProperty("username","mossoths");
 
 			EditText usernameEditText=(EditText)super.findViewById(R.id.usernameeditext);
-			Log.d(METHOD_NAME,": @@@@@@@@@username="+username);
+			if(debug){
+				Log.d(METHOD_NAME,": username="+username);
+			}
 			usernameEditText.setText(username);
 
 			String apiKey=properties.getProperty("apikey","99b917af206ae042f3291264e0b78a84");
 			EditText apiKeyEditText=(EditText)super.findViewById(R.id.apikeyedittext);
-			Log.d(METHOD_NAME,": @@@@@@@@@apiKey="+apiKey);
+			if(debug){
+				Log.d(METHOD_NAME,": apiKey="+apiKey);
+			}
 			apiKeyEditText.setText(apiKey);
 
 			String container=properties.getProperty("container","fimages");
 			EditText containerEditText=(EditText)super.findViewById(R.id.containeredittext);
-			Log.d(METHOD_NAME,": @@@@@@@@@container="+container);
+			if(debug){
+				Log.d(METHOD_NAME,": container="+container);
+			}
 			containerEditText.setText(container);
 			if(!fileExists){
-				Log.d(METHOD_NAME,": !!!!!!!@@@@@@@@@raxfiles.properties does not exist writing default values to it");
+				if(debug){
+					Log.d(METHOD_NAME,": raxfiles.properties does not exist writing default values to it");
+				}
 				properties.setProperty("username", username);
 				properties.setProperty("apikey", apiKey);
 				properties.setProperty("container", container);
@@ -128,15 +148,17 @@ public class ConfigActivity extends Activity {
 			inny.close();
 		} 
 		catch (FileNotFoundException e) {
-			Log.d(METHOD_NAME,": FileNotFoundException: ",e);
+			Log.e(METHOD_NAME,": FileNotFoundException: ",e);
 			e.printStackTrace();
 		} 
 		catch (IOException e) {
-			Log.d(METHOD_NAME,": IOException: ",e);
+			Log.e(METHOD_NAME,": IOException: ",e);
 			e.printStackTrace();
 		}
 
-		Log.d(METHOD_NAME,": EXIT:");
+		if(debug){
+			Log.d(METHOD_NAME,": EXIT:");
+		}
 	}
 	
 	private void creatUIListeners(){
@@ -148,7 +170,7 @@ public class ConfigActivity extends Activity {
 			public void onClick(View v) {
 				Properties properties=new Properties();
 
-				String METHOD_NAME="ConfigActivity.setUI().onClick()";
+				String METHOD_NAME="ConfigActivity.creatUIListeners().onClick()";
 				
 
 				EditText usernameEditText=(EditText)ConfigActivity.super.findViewById(R.id.usernameeditext);
@@ -192,14 +214,17 @@ public class ConfigActivity extends Activity {
 										Toast.LENGTH_LONG).show();
 							} 
 					    	catch (FileNotFoundException e) {
-								Log.d(METHOD_NAME,": FileNotFoundException: ",e);
+								Log.e(METHOD_NAME,": FileNotFoundException: ",e);
 								e.printStackTrace();
 							} 
 					    	catch (IOException e) {
-					    		Log.d(METHOD_NAME,": IOException: ",e);
+					    		Log.e(METHOD_NAME,": IOException: ",e);
 								e.printStackTrace();
 							}
-	
+					    	catch (Throwable e) {
+					    		Log.e(METHOD_NAME,": Throwable: ",e);
+								e.printStackTrace();
+							}	
 						}
 					}
 

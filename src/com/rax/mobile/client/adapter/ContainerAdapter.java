@@ -22,7 +22,7 @@ public class ContainerAdapter extends BaseAdapter {
 	private List<Map<String, String>>data;
 	private LayoutInflater inflater=null;
 	public ImageLoader imageLoader;
-	private static boolean debug=true;
+	private static final boolean debug=false;
 	
 	public ContainerAdapter(Activity a, List<Map<String, String>> d) {
 		String METHOD_NAME="ContainerAdapter:ContainerAdapter() Constructor:";
@@ -34,7 +34,7 @@ public class ContainerAdapter extends BaseAdapter {
 			}
 		}
 		this.inflater = (LayoutInflater)this.activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-		this.imageLoader=new ImageLoader(this.activity.getApplicationContext());
+		this.imageLoader=new ImageLoader(this.activity.getApplicationContext(),R.drawable.container);
 	}
 	
 	@Override
@@ -88,7 +88,7 @@ public class ContainerAdapter extends BaseAdapter {
 		
 		fileName.setText(fileNameStr);
 		count.setText(countStr);		
-		this.imageLoader.DisplayImage(R.drawable.folder, thumb_image);
+		this.imageLoader.DisplayImage(R.drawable.container, thumb_image);
 		
 		return v;
 	}

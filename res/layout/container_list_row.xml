@@ -18,7 +18,7 @@
             android:id="@+id/list_image"
             android:layout_width="25dip"
             android:layout_height="25dip"
-            android:background="@drawable/folder"/>
+            android:background="@drawable/container"/>
         
     </LinearLayout>
 
@@ -30,7 +30,7 @@
         android:layout_alignTop="@+id/thumbnail"
         android:layout_toRightOf="@+id/thumbnail"
         android:paddingLeft="10dip"     
-        android:textColor="#040404"
+        android:textColor="#343434"
         android:typeface="sans"
         android:textSize="12sp"
         android:text="@string/container_name_str"
@@ -43,7 +43,7 @@
         android:layout_alignTop="@+id/thumbnail"
         android:layout_toRightOf="@+id/filename_str"
         android:paddingLeft="10dip"     
-        android:textColor="#040404"
+        android:textColor="#343434"
         android:typeface="sans"
         android:textSize="12sp"
         android:textStyle="bold"

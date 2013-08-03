@@ -85,6 +85,7 @@ public class UploadActivity extends Activity {
 	    }
 	}	
 	
+	//NOTE: This method does not work on an emulator that does not have an emulated external SD Card 
 	private void getThumnails(){
         final String[] columns = { MediaStore.Images.Media.DATA, MediaStore.Images.Media._ID };
         final String orderBy = MediaStore.Images.Media._ID;
